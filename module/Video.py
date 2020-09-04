@@ -1,6 +1,5 @@
 import cv2
 import sys
-from time import sleep
 
 class Video:
     def __init__ (self, bg_img, move_img, move_img_bin, move_img_bin_inv):
@@ -34,9 +33,8 @@ class Video:
 
         for i in range (len(frames)):
             out.write(frames[i])
-            sys.stdout.write('\rUpdated record: ' + str(i) + ' of ' + str(len(frames)))
+            sys.stdout.write('\rCriando video: ' + str(i) + ' de ' + str(len(frames)))
             sys.stdout.flush()
-            # sleep(0.05) 
 
         out.release()
         print('\nVideo pronto!')
