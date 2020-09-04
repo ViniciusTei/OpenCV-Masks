@@ -19,4 +19,4 @@ campus = Image("assets/Campus-Florestal.jpg")
 
 video = Video(campus.img, logo.img, logobin, logobininv)
 
-video.createVideo('D:/Documentos/Codigos/PDI/atividade1/assets/teste.avi', 15, 10)
+video.createVideo('D:/Documentos/Codigos/PDI/atividade1/assets/teste.avi', 15, 20)
