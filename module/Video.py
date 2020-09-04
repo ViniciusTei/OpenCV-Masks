@@ -29,16 +29,14 @@ class Video:
             
             video_size = (largura_bg, altura_bg)
             frames.append(bg_copy)
-        
-        total_records = 100
-        for i in range (total_records):
-            sys.stdout.write('\rUpdated record: ' + str(i) + ' of ' + str(total_records))
-            sys.stdout.flush()
-            sleep(0.05) 
+            
         out = cv2.VideoWriter(path_out, cv2.VideoWriter_fourcc(*'mp4v'), fps, video_size)
 
         for i in range (len(frames)):
             out.write(frames[i])
+            sys.stdout.write('\rUpdated record: ' + str(i) + ' of ' + str(len(frames)))
+            sys.stdout.flush()
+            # sleep(0.05) 
 
         out.release()
         print('\nVideo pronto!')
