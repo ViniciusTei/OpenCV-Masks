@@ -1,5 +1,7 @@
 import numpy as np
 import cv2
+import pathlib
+
 from module.Image import Image
 from module.Video import Video
 
@@ -19,4 +21,5 @@ campus = Image("assets/Campus-Florestal.jpg")
 
 video = Video(campus.img, logo.img, logobin, logobininv)
 
-video.createVideo('D:/Documentos/Codigos/PDI/atividade1/assets/teste.avi', 15, 20)
+path = pathlib.Path().absolute()
+video.createVideo(path.as_posix() + "/assets/video.avi", 15, 20)
